@@ -295,7 +295,8 @@ public class UPose : MonoBehaviour, UPoseSource
 
     public Quaternion GetRotation(Landmark i)
     {
-        return body.rotations[(int)i];
+        if(body==null)return Quaternion.identity;
+        else return body.rotations[(int)i];
     }
     public Quaternion GetRotation(Landmark i,int Delay)
     {
