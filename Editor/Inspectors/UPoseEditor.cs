@@ -14,12 +14,12 @@ public class UPoseEditor : Editor
     {
         var root = new VisualElement();
 
-        /*Texture2D logo = Resources.Load<Texture2D>("logo");
+        Texture2D logo = Resources.Load<Texture2D>("upose_logo");
         var image = new Image();
         image.image = logo;
         image.scaleMode = ScaleMode.ScaleToFit;
         image.style.height = 50;
-        root.Add(image);*/
+        root.Add(image);
 
     
 
