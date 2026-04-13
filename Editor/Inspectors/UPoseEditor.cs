@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -95,4 +97,5 @@ public class UPoseEditor : Editor
 
         return root;
     }
+}
 }
