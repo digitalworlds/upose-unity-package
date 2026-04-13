@@ -1,10 +1,8 @@
 namespace edu.ufl.digitalworlds.upose
 {
-using System;
 using System.IO;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 
 [DefaultExecutionOrder(-1)]
