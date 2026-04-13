@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -100,4 +102,5 @@ class ServerUDP
     {
         Console.WriteLine(o);
     }
+}
 }

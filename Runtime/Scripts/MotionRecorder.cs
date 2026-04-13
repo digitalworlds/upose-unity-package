@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEngine;
 using System;
 using System.Collections.Generic;
@@ -120,4 +122,5 @@ public class MotionRecorder : MonoBehaviour
 
         Debug.Log("Saved to: " + path);
     }
+}
 }

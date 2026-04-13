@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 public enum Landmark
 {
     NOSE = 0,
@@ -39,4 +41,5 @@ public enum Landmark
     NECK = 36,
     HEAD = 37,
     NONE = 40
+}
 }

@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEngine;
 
 public class PoseDelay : MonoBehaviour, UPoseSource
@@ -130,4 +132,5 @@ public class PoseDelay : MonoBehaviour, UPoseSource
     public long getFrameCounter(){
         return previous_frame;
     }
+}
 }

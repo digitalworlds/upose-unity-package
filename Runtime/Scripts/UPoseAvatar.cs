@@ -1,4 +1,5 @@
-
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEngine;
 using GLTFast;
 using System.Linq;
@@ -195,4 +196,5 @@ public class UPoseAvatar : MonoBehaviour
         if (moveToFloor) MoveToFloor(floorLevel);
     }
 
+}
 }
