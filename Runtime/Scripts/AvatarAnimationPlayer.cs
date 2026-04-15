@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEngine;
 using System.IO;
 using Newtonsoft.Json;
@@ -103,4 +105,5 @@ public class AvatarAnimationPlayer : MonoBehaviour, UPoseSource
     {
         return current_frame;
     }
+}
 }

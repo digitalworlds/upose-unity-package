@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -100,4 +102,5 @@ public class LinePlotElement : VisualElement
     }
 
 
+}
 }

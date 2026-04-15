@@ -1,8 +1,8 @@
-using System;
+namespace edu.ufl.digitalworlds.upose
+{
 using System.IO;
 using System.Threading;
 using UnityEngine;
-using UnityEngine.ProBuilder.MeshOperations;
 
 
 [DefaultExecutionOrder(-1)]
@@ -295,7 +295,8 @@ public class UPose : MonoBehaviour, UPoseSource
 
     public Quaternion GetRotation(Landmark i)
     {
-        return body.rotations[(int)i];
+        if(body==null)return Quaternion.identity;
+        else return body.rotations[(int)i];
     }
     public Quaternion GetRotation(Landmark i,int Delay)
     {
@@ -608,4 +609,5 @@ public class UPose : MonoBehaviour, UPoseSource
         }
 
     }
+}
 }

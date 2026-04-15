@@ -1,0 +1,16 @@
+{
+    "name": "UPose.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ace89c51d4abf4bee962f51bf819ef21"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

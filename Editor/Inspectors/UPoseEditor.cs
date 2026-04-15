@@ -1,3 +1,5 @@
+namespace edu.ufl.digitalworlds.upose
+{
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -12,7 +14,7 @@ public class UPoseEditor : Editor
     {
         var root = new VisualElement();
 
-        Texture2D logo = Resources.Load<Texture2D>("logo");
+        Texture2D logo = Resources.Load<Texture2D>("upose_logo");
         var image = new Image();
         image.image = logo;
         image.scaleMode = ScaleMode.ScaleToFit;
@@ -95,4 +97,5 @@ public class UPoseEditor : Editor
 
         return root;
     }
+}
 }
