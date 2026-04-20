@@ -19,6 +19,8 @@ public class UPose : MonoBehaviour, UPoseSource
 
     public bool MMPose;
 
+    public bool boneTrack;
+
     private ServerUDP server;
 
     private Body body;
@@ -29,6 +31,8 @@ public class UPose : MonoBehaviour, UPoseSource
     {
         return body.instances[(int)mark].transform ;
     }
+
+
 
     private void Start()
     {
@@ -59,8 +63,13 @@ public class UPose : MonoBehaviour, UPoseSource
         UpdateBody(body);
     }
 
+        void FixedUpdate()
+        {
+            SkeletonLineDrawer.TurnonLineRenderer=boneTrack;
+        }
 
-    private void CalculatePelvisRotation(Body b)
+
+        private void CalculatePelvisRotation(Body b)
     {
         Vector3 p1=b.instances[(int)Landmark.LEFT_HIP].transform.localPosition;
         Vector3 p2=b.instances[(int)Landmark.RIGHT_HIP].transform.localPosition;
