@@ -65,7 +65,7 @@ public class UPose : MonoBehaviour, UPoseSource
 
         void FixedUpdate()
         {
-            SkeletonLineDrawer.TurnonLineRenderer=boneTrack;
+           Upose_MotionCapture.SkeletonLineDrawer.SkeletonLineDrawer.TurnonLineRenderer=boneTrack;
         }
 
 
