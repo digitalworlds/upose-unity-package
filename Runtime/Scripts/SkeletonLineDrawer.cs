@@ -1,30 +1,52 @@
-using UnityEditor.UI;
+//using UnityEditor.UI;
 using UnityEngine;
 namespace Upose_MotionCapture.SkeletonLineDrawer
 {
+    [RequireComponent(typeof(LineRenderer))]
     public class SkeletonLineDrawer: MonoBehaviour
 {
-   
+    [Header("Settings")]
+    public Transform avatarRoot; 
+    [Header("Bone Chain (Optional Override)")]    
     public Transform[] boneChain;
-
  
-    public float forwardOffset = 0.5f;
-    public Transform avatarRoot;    
+    public float forwardOffset = 0.5f;  
     private LineRenderer line;
 
-
-
     public static bool TurnonLineRenderer=false;
-    bool state = false;
+    private bool state = false;
+  //  public static bool IsLineRendererEnabled = false;
 
     void Start()
     {
-
         line = GetComponent<LineRenderer>();
-        if (boneChain != null)
+
+        if (line == null)
+            {
+                enabled = false;
+                return;
+            }
+
+        if (avatarRoot == null)
+            {
+                avatarRoot = transform;
+            }
+
+        if (boneChain == null || boneChain.Length == 0)
+            {
+                boneChain = avatarRoot.GetComponentsInChildren<Transform>();
+            }
+
+        if (boneChain != null && boneChain.Length > 0)
         {
             line.positionCount = boneChain.Length;
-        }
+            line.startWidth = 0.1f;
+            line.endWidth = 0.1f;
+            }
+            else
+            {
+                line.positionCount = 0;
+            }
     }
 
 
