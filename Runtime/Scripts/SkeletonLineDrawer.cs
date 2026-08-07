@@ -1,4 +1,6 @@
 //using UnityEditor.UI;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 namespace Upose_MotionCapture.SkeletonLineDrawer
 {
@@ -9,7 +11,11 @@ namespace Upose_MotionCapture.SkeletonLineDrawer
     public Transform avatarRoot; 
     [Header("Bone Chain (Optional Override)")]    
     public Transform[] boneChain;
- 
+    Transform[] AllBones;
+    Dictionary<String, Transform> FindJoint = new Dictionary<string, Transform>();
+    String[] Names = {"LeftHand","RightHand","LeftForeArm","Neck","Head","RightForeArm","LeftArm","RightArm","LeftShoulder","RightShoulder", "Spine2", "Spine1", "Spine", "Hips", "LeftUpLeg","RightUpLeg","LeftLeg","RightLeg","LeftFoot","RightFoot","LeftToeBase","RightToeBase"};
+    String[] Orderofnames = {"LeftHand","LeftForeArm","LeftArm","LeftShoulder","Neck","Head","Neck","RightShoulder","RightArm","RightForeArm","RightHand","RightForeArm","RightArm", "Spine2", "Spine1", "Spine", "Hips", "LeftUpLeg","LeftLeg","LeftFoot","LeftToeBase","LeftFoot","LeftLeg","LeftUpLeg","Hips","RightUpLeg","RightLeg","RightFoot","RightToeBase"};
+
     public float forwardOffset = 0.5f;  
     private LineRenderer line;
 
@@ -31,21 +37,30 @@ namespace Upose_MotionCapture.SkeletonLineDrawer
             {
                 avatarRoot = transform;
             }
-
+        AllBones = avatarRoot.GetComponentsInChildren<Transform>();
         if (boneChain == null || boneChain.Length == 0)
             {
-                boneChain = avatarRoot.GetComponentsInChildren<Transform>();
+                
             }
 
-        if (boneChain != null && boneChain.Length > 0)
-        {
-            line.positionCount = boneChain.Length;
+          line.positionCount = Orderofnames.Length;
             line.startWidth = 0.1f;
             line.endWidth = 0.1f;
-            }
-            else
-            {
                 line.positionCount = 0;
+        foreach(Transform bone in AllBones)
+            {
+                foreach(String nameofbone in Names)
+                {
+                    if (bone.name.CompareTo(nameofbone)==0)
+                    {
+                        FindJoint.Add(nameofbone, bone);
+                    }
+                }
+            }
+        AllBones = new Transform[Orderofnames.Length];
+        for(int i=0; i<Orderofnames.Length; i++)
+            {
+                AllBones[i]=FindJoint[Orderofnames[i]];
             }
     }
 
