@@ -1,7 +1,8 @@
 using UnityEditor.UI;
 using UnityEngine;
-
-public class SkeletonLineDrawer : MonoBehaviour
+namespace Upose_MotionCapture.SkeletonLineDrawer
+{
+    public class SkeletonLineDrawer: MonoBehaviour
 {
    
     public Transform[] boneChain;
@@ -63,3 +64,6 @@ public class SkeletonLineDrawer : MonoBehaviour
         }
     }
 }
+
+};
+

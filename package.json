@@ -5,5 +5,31 @@
     "description": "A Unity package for pose estimation and tracking",
     "dependencies": {
         "com.unity.cloud.gltfast": "6.10.3",
-        "com.unity.nuget.newtonsoft-json":"3.2.2"    }
+        "com.unity.nuget.newtonsoft-json":"3.2.2"    },
+    "unity": "6000.0",
+    "unityRelease": "66f2",
+    "author": {
+    "name": "Huaguo Tian",
+    "email": "2019202090041@whu.edu.cn"
+  },
+  "contributors": [
+    {
+      "name": "Angelos Barmpoutis",
+      "email": "angelos@digitalworlds.ufl.edu"
+    },
+    {
+      "name": "David Ramtulla",
+      "email": "daramtulla@gmail.com"
+    }
+    ,
+    {
+      "name": "Jonah Matousek",
+      "email": "jonahmatousekbusiness@gmail.com"
+    }
+    ,
+    {
+      "name": "Yixin Hou",
+      "email": "yixinhou1231@gmail.com"
+    }
+  ] 
 }
